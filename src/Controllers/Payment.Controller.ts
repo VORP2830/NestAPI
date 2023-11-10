@@ -1,5 +1,5 @@
-import { Body, Controller, Delete, Get, Post, Put } from "@nestjs/common";
-import { Payment } from "src/Entities/Payment.Module";
+import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { Payment } from "src/Entities/Payment.Model";
 import { PaymentService } from "src/Services/Payment.Service";
 
 @Controller('api/v1/payment')
@@ -23,7 +23,7 @@ export class PaymentController{
         return await this.paymentService.updatePayment(model);
     }
     @Delete(':id')
-    async delete(id: number): Promise<Payment>{
-        return await this.paymentService.deletePayment(id);
+    async delete(@Param('id') id: number): Promise<Payment> {
+    return await this.paymentService.deletePayment(id);
     }
 }

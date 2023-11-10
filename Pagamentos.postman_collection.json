@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "eca22c38-525f-4f35-99ba-f35c23e74d76",
+		"_postman_id": "878845cf-7564-4947-bf77-020220ea6c27",
 		"name": "Pagamentos",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "21508158"
@@ -10,7 +10,18 @@
 			"name": "GetAll",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/payment",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"payment"
+					]
+				}
 			},
 			"response": []
 		},
@@ -18,7 +29,19 @@
 			"name": "GetById",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/payment/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"payment",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},

@@ -1,8 +1,9 @@
-import { Payment } from './../Entities/Payment.Module';
-import { PrismaService } from "src/prisma.Service";
+import { PrismaClient } from '@prisma/client';
+import { Payment } from 'src/Entities/Payment.Model';
 
 export class PaymentService {
-    constructor(private prisma: PrismaService) { }
+    constructor() { }
+    prisma = new PrismaClient();
 
     async getAllPayments(): Promise<Payment[]> {
         return await this.prisma.payment.findMany();
